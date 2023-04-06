@@ -19,8 +19,8 @@ function App() {
     event.preventDefault();
     if (room !== null && user.length) {
       socket.emit("join_room", room);
+      setShowChat(true);
     }
-    setShowChat(true);
   };
 
   useEffect(() => {
